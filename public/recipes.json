@@ -1,0 +1,172 @@
+{
+  "Recipes": [
+    {
+      "Recipe category": "Arabic Food",
+      "Recipe category pic": "https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "Recipe sub categories": [
+        {
+          "Recipe sub category name": "Mansaf",
+          "Recipe sub category pic": "https://www.cheftariq.com/wp-content/uploads/2020/04/mansaf-4-1.jpg",
+          "Recipe sub category ingredients": [
+            {
+              "Recipe sub category ingredient name": "Meat",
+              "Recipe sub category ingredient desc": "The meat I am using in this recipe is a mix of Lamb bone-in cuts which I let the butcher chop into smaller pieces. You can use Lamb shank, leg, or any part you like, as long you manage to have them chop into pieces."
+            },
+            {
+              "Recipe sub category ingredient name": "Yogurt",
+              "Recipe sub category ingredient desc": "Traditionally, locals use the dry goat's milk called Jameed. However, in this recipe, I am using just plain yogurt. Some versions of Mansaf, like my recipe, prefer to use plain yogurt or Greek yogurt."
+            },
+            {
+              "Recipe sub category ingredient name": "Spices",
+              "Recipe sub category ingredient desc": "When you are boiling the lamb, I add a few spices to make sure the broth is flavorful. These spices include cinnamon stick, allspice, cardamom, bay leaves, peppercorn, and cloves."
+            },
+            {
+              "Recipe sub category ingredient name": "Condiments",
+              "Recipe sub category ingredient desc": "To enhance the flavor of this dish, I use garlic- that I sauteed in olive oil, and lemon juice which I later transfer all of them into my cooked yogurt sauce. Because Jameed has a natural sour taste, you will need lemon juice to add the sourness to the yogurt soup."
+            },
+            {
+              "Recipe sub category ingredient name": "Rice AND Flat-Bread",
+              "Recipe sub category ingredient desc": "I am using long-grain rice which I mix with turmeric and olive oil."
+            }
+          ],
+          "Recipe sub category desc": "Description of Mansaf"
+        },
+        {
+          "Recipe sub category name": "Maqluba",
+          "Recipe sub category pic": "https://static01.nyt.com/images/2017/01/08/magazine/08eat/08eat-master768-v2.jpg?w=1280&q=75",
+          "Recipe sub category ingredients": [
+            {
+              "Recipe sub category ingredient name": "Spices",
+              "Recipe sub category ingredient desc": "To make a Maqluba spice, I use a ready-made Baharat spice, Allspice, Bay Leaves, and Turmeric that I purchased from a Middle Eastern grocery store. These baharat spices already contain all kinds of spices which is easier and more convenient for me. If you don't have Baharat spice, you can use Garam Masala which is an Indian mixed spice. They taste similar except it is mildly spicy."
+            },
+            {
+              "Recipe sub category ingredient name": "Vegetables",
+              "Recipe sub category ingredient desc": "I use these 3 important vegetables for my Makloubeh- Potatoes, Eggplants, and Cauliflowers. It is important to fry them first before putting them into the pot since it will give a nice brown texture."
+            },
+            {
+              "Recipe sub category ingredient name": "Meat",
+              "Recipe sub category ingredient desc": "I am using Chicken as my protein meat. I prefer drumstick and thigh part since they are tender and juicy."
+            },
+            {
+              "Recipe sub category ingredient name": "Rice",
+              "Recipe sub category ingredient desc": "I am using just the ordinary rice for my recipe. Do not use any short grain or sticky rice as this will ruin the texture of the maqluba."
+            },
+            {
+              "Recipe sub category ingredient name": "Other Ingredients",
+              "Recipe sub category ingredient desc": "You need cooking oil when frying the vegetables & chicken, and salt & black pepper for taste."
+            }
+          ],
+          "Recipe sub category desc": "Description of Maqlubah"
+        }
+      ]
+    },
+    {
+      "Recipe category": "Turkish Food",
+      "Recipe category pic": "https://images.pexels.com/photos/7813739/pexels-photo-7813739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "Recipe sub categories": [
+        {
+          "Recipe sub category name": "Moussaka",
+          "Recipe sub category pic": "https://theodehlicious.com/wp-content/uploads/2022/01/Turkish-Moussaka-III.jpg",
+          "Recipe sub category ingredients": [
+            {
+              "Recipe sub category ingredient name": "Meat",
+              "Recipe sub category ingredient desc": "I am using ground beef which is 90% lean and 10% fat. Honestly, it doesn't matter the ratio of fat and meat. As long you cook it longer to remove the excess juices, that will be fine."
+            },
+            {
+              "Recipe sub category ingredient name": "Vegetables",
+              "Recipe sub category ingredient desc": "I am using green bell pepper since it gives nice aroma, and eggplant."
+            },
+            {
+              "Recipe sub category ingredient name": "Tomatoes",
+              "Recipe sub category ingredient desc": "Chopped tomatoes and tomato paste is used in this recipe."
+            },
+            {
+              "Recipe sub category ingredient name": "SPICES & HERBS",
+              "Recipe sub category ingredient desc": "o make the dish tasty, I use curry, cinnamon, & curry powder, garlic, onion, and basil leaves for topping."
+            }
+          ],
+          "Recipe sub category desc": "Description of Moussaka"
+        },
+        {
+          "Recipe sub category name": "Coban Salatasi",
+          "Recipe sub category pic": "https://theodehlicious.com/wp-content/uploads/2020/09/Shepherd-Salad-I-750x563.jpg",
+          "Recipe sub category ingredients": [
+            {
+              "Recipe sub category ingredient name": "Cucumber, tomatoes, and red onion",
+              "Recipe sub category ingredient desc": "as my 3 main ingredients for my salad. "
+            },
+            {
+              "Recipe sub category ingredient name": "Green olives, black olives, and feta cheese",
+              "Recipe sub category ingredient desc": "I am using both green olives, black olives, and feta cheese since it gives a mild saltiness of my salad. That way, you don't need to add any salt since you get its natural saltiness from the salad."
+            },
+            {
+              "Recipe sub category ingredient name": "Virgin olive oil and lemon juice",
+              "Recipe sub category ingredient desc": "I am using extra virgin olive oil and lemon juice (optional) as my salad dressing. It will help enhance the flavor of my salad. Also, it is nutritious, healthy, and high in antioxidants."
+            }
+          ],
+          "Recipe sub category desc": "Description of Coban Salatasi"
+        }
+      ]
+    },
+    {
+      "Recipe category": "Sea Food",
+      "Recipe category pic": "https://cdn.pixabay.com/photo/2013/07/19/00/18/seafood-165220_1280.jpg",
+      "Recipe sub categories": [
+        {
+          "Recipe sub category name": "Filipino Chicken Curry",
+          "Recipe sub category pic": "https://theodehlicious.com/wp-content/uploads/2023/04/Filipino-Chicken-Curry-1024x768.jpg",
+          "Recipe sub category ingredients": [
+            {
+              "Recipe sub category ingredient name": "Meat",
+              "Recipe sub category ingredient desc": "I am using mixed of chicken drumstick and thigh."
+            },
+            {
+              "Recipe sub category ingredient name": "Vegetables",
+              "Recipe sub category ingredient desc": "The list of vegetables I use includes Potatoes, Carrots, and Bell Pepper."
+            },
+            {
+              "Recipe sub category ingredient name": "Tomatoes",
+              "Recipe sub category ingredient desc": "Chopped tomatoes and tomato paste is used in this recipe."
+            },
+            {
+              "Recipe sub category ingredient name": "Spices & Herpes",
+              "Recipe sub category ingredient desc": "I am using garlic, ginger, onion, and Filipino curry powder. The local curry is found in Filipino grocery stores."
+            }
+          ],
+          "Recipe sub category desc": "Description of Filipino Chicken Curry"
+        },
+        {
+          "Recipe sub category name": "Tashreeb",
+          "Recipe sub category pic": "https://theodehlicious.com/wp-content/uploads/2023/03/Tashreeb-Recipe-III-1024x768.jpg",
+          "Recipe sub category ingredients": [
+            {
+              "Recipe sub category ingredient name": "Meat",
+              "Recipe sub category ingredient desc": "I am using chicken as my source of protein since it is easier and faster to cook than lamb."
+            },
+            {
+              "Recipe sub category ingredient name": "Vegetables",
+              "Recipe sub category ingredient desc": "To make this stew dish nutritious and healthy, I added carrots, potatoes, and eggplant."
+            },
+            {
+              "Recipe sub category ingredient name": "Flatbread",
+              "Recipe sub category ingredient desc": "I am using brown Saj bread which is a type of Middle Eastern flatbread used on shawarmas."
+            },
+            {
+              "Recipe sub category ingredient name": "Tomatoes and Tomato Paste",
+              "Recipe sub category ingredient desc": "These two ingredients are important to redden the stew and give a sweet and tangy flavor."
+            },
+            {
+              "Recipe sub category ingredient name": "Herbs",
+              "Recipe sub category ingredient desc": "The onion and garlic help enhance the flavor of the tashreeb. Furthermore, I added chopped parsley leaves which I add to the stew and garnish as well."
+            },
+            {
+              "Recipe sub category ingredient name": "Spices",
+              "Recipe sub category ingredient desc": "Of all the ingredients, the spices are the most important one since this is what gives the flavor of your stew. Here is the list of spices I used for my tashreeb: Cumin Powder, Turmeric Powder, Curry Powder, Cloves, Cinnamon Stick, Black Lemon, Bay Leaves, Cardamom Pods, Salt, Black Pepper."
+            }
+          ],
+          "Recipe sub category desc": "Description of Filipino Chicken Curry"
+        }
+      ]
+    }
+  ]
+}
