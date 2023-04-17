@@ -1,2 +1,52 @@
 /* Sector: Home main styles */
 
+.homePage {
+  width: 100%;
+  height: auto;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.upperHomeCont,
+.homeHeroCont {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+
+  padding: 6rem 0;
+
+  font-family: "Domine", serif;
+}
+
+.upperHomeCont {
+  font-family: "Domine", serif;
+}
+
+.upperHomeCont h1 {
+  font-family: inherit;
+  font-size: 4rem;
+  font-weight: bold;
+
+  color: var(--color-pr);
+}
+
+.homeHero {
+  width: 100%;
+  height: auto;
+
+  background: linear-gradient(to right, var(--color-pr-l2), var(--color-pr));
+}
+
+.homeHeroCont {
+  font-family: inherit;
+}
+
+.homeHeroCardsCont{
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+

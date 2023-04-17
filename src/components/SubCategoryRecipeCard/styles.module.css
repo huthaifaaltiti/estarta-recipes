@@ -1,0 +1,44 @@
+/* Sector: SubCategoryRecipeCard main classes */
+
+.recipeSubCategoryBody {
+  width: 25rem;
+  height: 16rem;
+
+  padding: 2rem;
+
+  background-color: var(--color-te-d1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+
+  box-shadow: var(--shadow-3);
+
+  background-size: cover;
+  background-position: center center;
+
+  border-radius: 0.4rem;
+
+  position: relative;
+}
+
+.recipeSubCategoryBody h2 {
+  font-size: 2.2rem;
+
+  text-shadow: var(--shadow-6);
+
+  color: var(--color-wh);
+}
+
+.btnCont {
+  width: 100%;
+
+  display: grid;
+  place-items: center;
+
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -1,8 +1,18 @@
 // react
-import React from 'react'
+import React from "react";
+
+// styles
+import styles from "./styles.module.css";
 
 export default function NavBar() {
   return (
-    <div>NavBar</div>
-  )
+    <div className={styles.navBarBody}>
+      <div className={styles.navBarCont}>
+        <div className={styles.navBarLogoCont}>
+          Estarta
+          <span>Recipes</span>
+        </div>
+      </div>
+    </div>
+  );
 }
