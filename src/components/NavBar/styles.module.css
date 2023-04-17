@@ -1,1 +1,31 @@
 /* Sector: NavBar main styles */
+
+.navBarBody {
+  width: 100%;
+
+  font-family: "Poppins", sans-serif;
+
+  background-color: var(--color-wh);
+}
+
+.navBarCont {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+
+  padding: 2rem 0;
+
+  background-color: inherit;
+
+  border-bottom: 1px solid var(--color-gr);
+}
+
+.navBarLogoCont {
+  font-size: 1.8rem;
+  font-weight: normal;
+  font-family: inherit;
+}
+
+.navBarLogoCont span {
+  color: var(--color-se);
+}

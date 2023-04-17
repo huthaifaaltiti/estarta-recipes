@@ -19,11 +19,11 @@ function App() {
   return (
     <div className="App">
       <Suspense fallback="Loading...">
-        <NavBar />
+        {/* <NavBar /> */}
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/recipes" element={<Recipes />} />
-          <Route path="/recipes/:recipeCategory" element={<SingleRecipe  />}/>
+          <Route path="/recipes/:recipeCategory" element={<Recipes />} />
+          <Route path="/recipes/:singleRecipeCategory" element={<SingleRecipe  />}/>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

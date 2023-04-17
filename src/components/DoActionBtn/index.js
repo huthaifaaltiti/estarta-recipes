@@ -1,8 +1,13 @@
 // react
-import React from 'react'
+import React from "react";
 
-export default function DoActionBtn() {
+// styles
+import styles from "./styles.module.css";
+
+export default function DoActionBtn({text}) {
   return (
-    <div>DoActionBtn</div>
-  )
+    <div className={styles.doActionBtnBody}>
+      <button>{text}</button>
+    </div>
+  );
 }

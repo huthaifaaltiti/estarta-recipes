@@ -1,1 +1,20 @@
 /* Sector: DoActionBtn main styles */
+
+.doActionBtnBody button {
+  font-size: 1.2rem;
+
+  border: none;
+  padding: 1rem 2rem;
+
+  border-radius: 0.5rem;
+  background-color: var(--color-se);
+  color: var(--color-wh);
+
+  cursor: pointer;
+
+  transition: all 0.1s ease-in-out;
+}
+
+.doActionBtnBody button:hover {
+  background-color: var(--color-se-l1);
+}
