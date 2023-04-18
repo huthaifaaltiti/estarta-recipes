@@ -45,3 +45,11 @@ export const addRecipeComment =
       },
     });
   };
+
+export const deleteRecipeComment =
+  (recipeComment, sentRecipeCategory, checkedRecipeForDel) => (dispatch) => {
+    dispatch({
+      type: RECIPES_CONSTANTS.RECIPES_DELETE_RECIPE_COMMENT,
+      payload: { recipeComment, sentRecipeCategory, checkedRecipeForDel },
+    });
+  };

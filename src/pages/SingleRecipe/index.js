@@ -26,9 +26,7 @@ export default function SingleRecipe() {
     (recipe) => recipe.RecipeSubCategoryName === singleRecipeCategory
   );
 
-  const recipeComments =
-    sentRecipeCategory[0].RecipeSubCategories[0].RecipeSubCategoryComments;
-  console.log({ recipeComments });
+  const recipeComments = checkedRecipe[0].RecipeSubCategoryComments;
 
   return (
     <div className={styles.singleRecipePage}>
@@ -66,7 +64,11 @@ export default function SingleRecipe() {
 
             <div>
               {recipeComments.map((recipeComment) => (
-                <AddRecipeComment recipeComment={recipeComment} />
+                <AddRecipeComment
+                  sentRecipeCategory={sentRecipeCategory}
+                  checkedRecipeForDel={checkedRecipe}
+                  recipeComment={recipeComment}
+                />
               ))}
             </div>
           </div>
