@@ -1,13 +1,16 @@
 // react
-import React from "react";
+import React, { useEffect } from "react";
 // react-router-dom
 import { useNavigate, useParams } from "react-router-dom";
 // react-redux
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 // components
 import SubCategoryRecipeCard from "../../components/SubCategoryRecipeCard";
 import DoActionBtn from "../../components/DoActionBtn";
+
+// creator functions
+import { sendRecipeCategory } from "../../redux/Reducers/RecipesReducer/actions";
 
 // styles
 import styles from "./styles.module.css";
@@ -15,10 +18,18 @@ import styles from "./styles.module.css";
 export default function Recipes() {
   const { recipeCategory } = useParams();
   const nav = useNavigate();
-  const { allRecipes } = useSelector((state) => state.recipesReducer);
+  const dispatch = useDispatch();
+
+  const { allRecipes } = useSelector(
+    (state) => state.recipesReducer
+  );
   const findRecipeCategory = allRecipes.filter(
     (recipe) => recipe.RecipeCategory === recipeCategory
   );
+
+  useEffect(() => {
+    dispatch(sendRecipeCategory(findRecipeCategory));
+  }, []);
 
   return (
     <div className={styles.recipesPage}>
@@ -52,7 +63,12 @@ export default function Recipes() {
           <div className={styles.subRecipeCategoriesCont}>
             {findRecipeCategory[0].RecipeSubCategories.map(
               (subRecipe, index) => (
-                <SubCategoryRecipeCard subRecipe={subRecipe} key={index} />
+                <SubCategoryRecipeCard
+                  findRecipeCategory={findRecipeCategory}
+                  recipeCategory={recipeCategory}
+                  subRecipe={subRecipe}
+                  key={index}
+                />
               )
             )}
           </div>

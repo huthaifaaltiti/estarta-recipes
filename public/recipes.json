@@ -30,7 +30,15 @@
               "RecipeSubCategoryIngredientDesc": "I am using long-grain rice which I mix with turmeric and olive oil."
             }
           ],
-          "RecipeSubCategoryDesc": "Description of Mansaf"
+          "RecipeSubCategoryDesc": "Description of Mansaf",
+          "RecipeSubCategoryComments": [
+            {
+              "RecipeSubCategoryCommentPic": "https://i.pravatar.cc/",
+              "RecipeSubCategoryCommentUsername": "Comment username",
+              "RecipeSubCategoryCommentSubUsername": "Visitor",
+              "RecipeSubCategoryCommentContent": "this Arabian dish is so good, it has a special taste specially when yogurt is hot the bread is wet"
+            }
+          ]
         },
         {
           "RecipeSubCategoryName": "Maqluba",
