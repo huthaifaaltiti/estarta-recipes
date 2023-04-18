@@ -65,7 +65,15 @@
               "RecipeSubCategoryIngredientDesc": "You need cooking oil when frying the vegetables & chicken, and salt & black pepper for taste."
             }
           ],
-          "RecipeSubCategoryDesc": "Description of Maqlubah"
+          "RecipeSubCategoryDesc": "Description of Maqlubah",
+          "RecipeSubCategoryComments": [
+            {
+              "RecipeSubCategoryCommentPic": "https://i.pravatar.cc/",
+              "RecipeSubCategoryCommentUsername": "Maqlubah",
+              "RecipeSubCategoryCommentSubUsername": "Visitor",
+              "RecipeSubCategoryCommentContent": "Maqluba"
+            }
+          ]
         },
         {
           "RecipeSubCategoryName": "Malfouf",
@@ -88,7 +96,15 @@
               "RecipeSubCategoryIngredientDesc": "So as not to make this dish boring, I like to add chicken and sliced potatoes & tomatoes in the pot when simmering the malfouf. Adding some protein and potatoes will make this meal complete. But this is just optional if you don't want to."
             }
           ],
-          "RecipeSubCategoryDesc": "Description of Malfouf"
+          "RecipeSubCategoryDesc": "Description of Malfouf",
+          "RecipeSubCategoryComments": [
+            {
+              "RecipeSubCategoryCommentPic": "https://i.pravatar.cc/",
+              "RecipeSubCategoryCommentUsername": "Malfouf",
+              "RecipeSubCategoryCommentSubUsername": "Visitor",
+              "RecipeSubCategoryCommentContent": "Malfouf"
+            }
+          ]
         },
         {
           "RecipeSubCategoryName": "Traditional Arabic Salad",
@@ -111,7 +127,15 @@
               "RecipeSubCategoryIngredientDesc": "Tomatoes."
             }
           ],
-          "RecipeSubCategoryDesc": "Description of Traditional Arabic Salad"
+          "RecipeSubCategoryDesc": "Description of Traditional Arabic Salad",
+          "RecipeSubCategoryComments": [
+            {
+              "RecipeSubCategoryCommentPic": "https://i.pravatar.cc/",
+              "RecipeSubCategoryCommentUsername": "Arabic Salad",
+              "RecipeSubCategoryCommentSubUsername": "Visitor",
+              "RecipeSubCategoryCommentContent": "Arabic Salad"
+            }
+          ]
         }
       ]
     },
@@ -141,7 +165,15 @@
               "RecipeSubCategoryIngredientDesc": "o make the dish tasty, I use curry, cinnamon, & curry powder, garlic, onion, and basil leaves for topping."
             }
           ],
-          "RecipeSubCategoryDesc": "Description of Moussaka"
+          "RecipeSubCategoryDesc": "Description of Moussaka",
+          "RecipeSubCategoryComments": [
+            {
+              "RecipeSubCategoryCommentPic": "https://i.pravatar.cc/",
+              "RecipeSubCategoryCommentUsername": "Moussaka",
+              "RecipeSubCategoryCommentSubUsername": "Visitor",
+              "RecipeSubCategoryCommentContent": "Moussaka"
+            }
+          ]
         },
         {
           "RecipeSubCategoryName": "Coban Salatasi",
@@ -160,7 +192,15 @@
               "RecipeSubCategoryIngredientDesc": "I am using extra virgin olive oil and lemon juice (optional) as my salad dressing. It will help enhance the flavor of my salad. Also, it is nutritious, healthy, and high in antioxidants."
             }
           ],
-          "RecipeSubCategoryDesc": "Description of Coban Salatasi"
+          "RecipeSubCategoryDesc": "Description of Coban Salatasi",
+          "RecipeSubCategoryComments": [
+            {
+              "RecipeSubCategoryCommentPic": "https://i.pravatar.cc/",
+              "RecipeSubCategoryCommentUsername": "Coban Salatasi",
+              "RecipeSubCategoryCommentSubUsername": "Visitor",
+              "RecipeSubCategoryCommentContent": "Coban Salatasi"
+            }
+          ]
         }
       ]
     },
@@ -190,7 +230,15 @@
               "RecipeSubCategoryIngredientDesc": "I am using garlic, ginger, onion, and Filipino curry powder. The local curry is found in Filipino grocery stores."
             }
           ],
-          "RecipeSubCategoryDesc": "Description of Filipino Chicken Curry"
+          "RecipeSubCategoryDesc": "Description of Filipino Chicken Curry",
+          "RecipeSubCategoryComments": [
+            {
+              "RecipeSubCategoryCommentPic": "https://i.pravatar.cc/",
+              "RecipeSubCategoryCommentUsername": "Chicken Curry",
+              "RecipeSubCategoryCommentSubUsername": "Visitor",
+              "RecipeSubCategoryCommentContent": "Chicken Curry"
+            }
+          ]
         },
         {
           "RecipeSubCategoryName": "Tashreeb",
@@ -222,7 +270,15 @@
               "RecipeSubCategoryIngredientDesc": "Of all the ingredients, the spices are the most important one since this is what gives the flavor of your stew. Here is the list of spices I used for my tashreeb: Cumin Powder, Turmeric Powder, Curry Powder, Cloves, Cinnamon Stick, Black Lemon, Bay Leaves, Cardamom Pods, Salt, Black Pepper."
             }
           ],
-          "RecipeSubCategoryDesc": "Description of Filipino Chicken Curry"
+          "RecipeSubCategoryDesc": "Description of Tashreeb",
+          "RecipeSubCategoryComments": [
+            {
+              "RecipeSubCategoryCommentPic": "https://i.pravatar.cc/",
+              "RecipeSubCategoryCommentUsername": "Tashreeb",
+              "RecipeSubCategoryCommentSubUsername": "Visitor",
+              "RecipeSubCategoryCommentContent": "Tashreeb"
+            }
+          ]
         }
       ]
     }

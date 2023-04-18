@@ -55,17 +55,52 @@ const recipesReducer = (state = initialState, action) => {
         ],
       };
 
-      const newCatSate = state.sentRecipeCategory[0].RecipeSubCategories.map(
-        (category) =>
+      const newCategorySate =
+        state.sentRecipeCategory[0].RecipeSubCategories.map((category) =>
           checkedRecipe[0] === category ? newNeededRecipe : category
-      );
-
-      console.log(state.sentRecipeCategory[0]);
+        );
 
       return {
         ...state,
         sentRecipeCategory: [
-          { ...state.sentRecipeCategory, RecipeSubCategories: [...newCatSate] },
+          {
+            ...state.sentRecipeCategory,
+            RecipeSubCategories: [...newCategorySate],
+          },
+        ],
+      };
+
+    case RECIPES_CONSTANTS.RECIPES_DELETE_RECIPE_COMMENT:
+      const { recipeComment, sentRecipeCategory, checkedRecipeForDel } =
+        action.payload;
+
+      const findCate = state.sentRecipeCategory[0].RecipeSubCategories.filter(
+        (category) =>
+          checkedRecipeForDel[0].RecipeSubCategoryName ===
+          category.RecipeSubCategoryName
+      );
+
+      const undeletedComments = findCate[0].RecipeSubCategoryComments.filter(
+        (comment) => recipeComment !== comment
+      );
+
+      const newUpdatedCat = {
+        ...findCate[0],
+        RecipeSubCategoryComments: undeletedComments,
+      };
+
+      const newUpdatedSate =
+        state.sentRecipeCategory[0].RecipeSubCategories.map((category) =>
+          checkedRecipeForDel[0] === category ? newUpdatedCat : category
+        );
+
+      return {
+        ...state,
+        sentRecipeCategory: [
+          {
+            ...state.sentRecipeCategory,
+            RecipeSubCategories: [...newUpdatedSate],
+          },
         ],
       };
 
