@@ -1,0 +1,65 @@
+/* Sector: AddRecipeComment main classes */
+
+.singleRecipeCommentCont {
+  width: 100%;
+
+  padding: 2.4rem 2rem;
+  margin-bottom: 2rem;
+
+  background-color: var(--color-te);
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.singleRecipeCommentContent {
+  font-size: 1.4rem;
+
+  font-style: italic;
+
+  color: var(--color-te-l3);
+}
+
+.singleRecipeCommentContent::first-letter {
+  font-size: 1.4rem;
+  color: var(--color-te-l3);
+  text-transform: uppercase;
+}
+
+.commentUserCont {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.commentUserImgCont {
+  width: 3rem;
+  height: 3rem;
+
+  border-radius: 50%;
+}
+
+.commentUserImgCont img {
+  width: 100%;
+  height: 100%;
+
+  border-radius: inherit;
+}
+
+.commentUserNameCont {
+  display: flex;
+  flex-direction: column;
+}
+
+.commentUsername {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.commentSubUsername {
+  font-size: 1rem;
+  font-weight: normal;
+}

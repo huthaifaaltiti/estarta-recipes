@@ -23,3 +23,25 @@ export const fetchAllRecipes = () => async (dispatch) => {
     });
   }
 };
+
+export const sendRecipeCategory = (findRecipeCategory) => (dispatch) => {
+  dispatch({
+    type: RECIPES_CONSTANTS.RECIPES_SEND_RECIPE_CATEGORY,
+    payload: findRecipeCategory,
+  });
+};
+
+export const addRecipeComment =
+  (userName, userStatus, commentContent, sentRecipeCategory, checkedRecipe) =>
+  (dispatch) => {
+    dispatch({
+      type: RECIPES_CONSTANTS.RECIPES_SEND_RECIPE_COMMENT,
+      payload: {
+        userName,
+        userStatus,
+        commentContent,
+        sentRecipeCategory,
+        checkedRecipe,
+      },
+    });
+  };

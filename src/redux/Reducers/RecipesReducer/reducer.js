@@ -4,6 +4,7 @@ import * as RECIPES_CONSTANTS from "./constants";
 // recipesReducer state
 const initialState = {
   allRecipes: [],
+  sentRecipeCategory: [],
 
   loading: false,
   error: null,
@@ -22,6 +23,50 @@ const recipesReducer = (state = initialState, action) => {
       return {
         ...state,
         allRecipes: action.payload,
+      };
+
+    case RECIPES_CONSTANTS.RECIPES_SEND_RECIPE_CATEGORY:
+      return {
+        ...state,
+        sentRecipeCategory: action.payload,
+      };
+
+    case RECIPES_CONSTANTS.RECIPES_SEND_RECIPE_COMMENT:
+      const { userName, userStatus, commentContent, checkedRecipe } =
+        action.payload;
+
+      const neededRecipe =
+        state.sentRecipeCategory[0].RecipeSubCategories.filter(
+          (category) =>
+            checkedRecipe[0].RecipeSubCategoryName ===
+            category.RecipeSubCategoryName
+        );
+
+      const newNeededRecipe = {
+        ...neededRecipe[0],
+        RecipeSubCategoryComments: [
+          ...neededRecipe[0].RecipeSubCategoryComments,
+          {
+            RecipeSubCategoryCommentPic: "https://i.pravatar.cc/",
+            RecipeSubCategoryCommentUsername: userName,
+            RecipeSubCategoryCommentSubUsername: userStatus,
+            RecipeSubCategoryCommentContent: commentContent,
+          },
+        ],
+      };
+
+      const newCatSate = state.sentRecipeCategory[0].RecipeSubCategories.map(
+        (category) =>
+          checkedRecipe[0] === category ? newNeededRecipe : category
+      );
+
+      console.log(state.sentRecipeCategory[0]);
+
+      return {
+        ...state,
+        sentRecipeCategory: [
+          { ...state.sentRecipeCategory, RecipeSubCategories: [...newCatSate] },
+        ],
       };
 
     case RECIPES_CONSTANTS.RECIPES_FETCH_DATA_FAILURE:
