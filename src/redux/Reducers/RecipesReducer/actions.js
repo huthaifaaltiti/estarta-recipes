@@ -10,8 +10,6 @@ export const fetchAllRecipes = () => async (dispatch) => {
     const response = await fetch("recipes.json");
     const dataResponse = await response.json();
 
-    // console.log(dataResponse.Recipes);
-
     dispatch({
       type: RECIPES_CONSTANTS.RECIPES_FETCH_DATA_SUCCESS,
       payload: dataResponse.Recipes,
@@ -52,4 +50,65 @@ export const deleteRecipeComment =
       type: RECIPES_CONSTANTS.RECIPES_DELETE_RECIPE_COMMENT,
       payload: { recipeComment, sentRecipeCategory, checkedRecipeForDel },
     });
+  };
+
+export const addNewRecipe =
+  (
+    mainDishCategory,
+    recipeName,
+    recipeDesc,
+    ingredients,
+    aboutIngredients,
+    addRecipePic
+  ) =>
+  async (dispatch) => {
+    try {
+      dispatch({
+        type: RECIPES_CONSTANTS.RECIPES_FETCH_DATA_REQUEST,
+      });
+
+      let recipeIngredients = [];
+
+      for (let i = 0; i < ingredients.length; i++) {
+        const ingredient = {
+          RecipeSubCategoryIngredientName: ingredients[i],
+          RecipeSubCategoryIngredientDesc: aboutIngredients[i],
+        };
+        recipeIngredients.push(ingredient);
+      }
+
+      const newRecipeToAdd = {
+        RecipeSubCategoryName: recipeName,
+        RecipeSubCategoryPic: addRecipePic,
+        RecipeSubCategoryIngredients: recipeIngredients,
+        RecipeSubCategoryDesc: recipeDesc,
+        RecipeSubCategoryComments: [
+          {
+            RecipeSubCategoryCommentPic: "https://i.pravatar.cc/",
+            RecipeSubCategoryCommentUsername: "Comment username",
+            RecipeSubCategoryCommentSubUsername: "Visitor",
+            RecipeSubCategoryCommentContent: "test",
+          },
+        ],
+      };
+
+      const response = await fetch("recipes.json");
+      const dataResponse = await response.json();
+      dataResponse.Recipes.map((recipe) =>
+        recipe.RecipeCategory === mainDishCategory
+          ? recipe.RecipeSubCategories.push(newRecipeToAdd)
+          : recipe
+      );
+      // console.log("After:", dataResponse.Recipes);
+
+      dispatch({
+        type: RECIPES_CONSTANTS.RECIPES_FETCH_DATA_SUCCESS,
+        payload: dataResponse.Recipes,
+      });
+    } catch (error) {
+      dispatch({
+        type: RECIPES_CONSTANTS.RECIPES_FETCH_DATA_FAILURE,
+        payload: error.message,
+      });
+    }
   };

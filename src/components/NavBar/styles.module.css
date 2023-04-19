@@ -18,6 +18,10 @@
   background-color: inherit;
 
   border-bottom: 1px solid var(--color-gr);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navBarLogoCont {
