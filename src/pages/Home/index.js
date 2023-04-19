@@ -12,13 +12,10 @@ import { fetchAllRecipes } from "../../redux/Reducers/RecipesReducer/actions";
 
 // styles, icons
 import styles from "./styles.module.css";
-import { GiHotMeal } from "react-icons/gi";
 
 export default function Home() {
   const dispatch = useDispatch();
   const { allRecipes } = useSelector((state) => state.recipesReducer);
-
-  console.log({ allRecipes });
 
   useEffect(() => {
     dispatch(fetchAllRecipes());
