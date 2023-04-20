@@ -24,9 +24,7 @@ export default function SingleRecipe() {
 
   const { singleRecipeCategory } = useParams();
 
-  const { allRecipes, sentRecipeCategory } = useSelector(
-    (state) => state.recipesReducer
-  );
+  const { sentRecipeCategory } = useSelector((state) => state.recipesReducer);
 
   const checkedRecipe = sentRecipeCategory[0].RecipeSubCategories.filter(
     (recipe) => recipe.RecipeSubCategoryName === singleRecipeCategory
