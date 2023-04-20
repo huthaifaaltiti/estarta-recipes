@@ -7,7 +7,7 @@ export const fetchAllRecipes = () => async (dispatch) => {
       type: RECIPES_CONSTANTS.RECIPES_FETCH_DATA_REQUEST,
     });
 
-    const response = await fetch("recipes.json");
+    const response = await fetch("data.json");
     const dataResponse = await response.json();
 
     dispatch({
@@ -100,7 +100,7 @@ export const addNewRecipe =
         ],
       };
 
-      const response = await fetch("recipes.json");
+      const response = await fetch("data.json");
       const dataResponse = await response.json();
       dataResponse.Recipes.map((recipe) =>
         recipe.RecipeCategory === mainDishCategory
