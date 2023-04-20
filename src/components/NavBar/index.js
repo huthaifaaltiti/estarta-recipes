@@ -1,12 +1,13 @@
 // react
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 // Component
 import DoActionBtn from "../DoActionBtn/index";
 
-// styles
+// styles, icon
 import styles from "./styles.module.css";
+import { AiOutlineAppstoreAdd } from "react-icons/ai";
 
 export default function NavBar() {
   return (
@@ -19,7 +20,10 @@ export default function NavBar() {
 
         <Link to="/add-recipe">
           <span>
-            <DoActionBtn text={"Add New Recipe"} />
+            <DoActionBtn
+              text={"Add New Recipe"}
+              icon={<AiOutlineAppstoreAdd />}
+            />
           </span>
         </Link>
       </div>

@@ -32,8 +32,15 @@ const recipesReducer = (state = initialState, action) => {
       };
 
     case RECIPES_CONSTANTS.RECIPES_SEND_RECIPE_COMMENT:
-      const { userName, userStatus, commentContent, checkedRecipe } =
-        action.payload;
+      const {
+        userName,
+        userStatus,
+        commentContent,
+        checkedRecipe,
+        singleRecipeCategory,
+      } = action.payload;
+
+      console.log({ singleRecipeCategory });
 
       const neededRecipe =
         state.sentRecipeCategory[0].RecipeSubCategories.filter(

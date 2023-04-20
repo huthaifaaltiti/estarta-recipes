@@ -30,7 +30,14 @@ export const sendRecipeCategory = (findRecipeCategory) => (dispatch) => {
 };
 
 export const addRecipeComment =
-  (userName, userStatus, commentContent, sentRecipeCategory, checkedRecipe) =>
+  (
+    userName,
+    userStatus,
+    commentContent,
+    sentRecipeCategory,
+    checkedRecipe,
+    singleRecipeCategory
+  ) =>
   (dispatch) => {
     dispatch({
       type: RECIPES_CONSTANTS.RECIPES_SEND_RECIPE_COMMENT,
@@ -40,6 +47,7 @@ export const addRecipeComment =
         commentContent,
         sentRecipeCategory,
         checkedRecipe,
+        singleRecipeCategory,
       },
     });
   };

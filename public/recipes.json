@@ -169,7 +169,7 @@
           "RecipeSubCategoryComments": [
             {
               "RecipeSubCategoryCommentPic": "https://i.pravatar.cc/",
-              "RecipeSubCategoryCommentUsername": "Moussaka",
+              "RecipeSubCategoryCommentUsername": "Comment username",
               "RecipeSubCategoryCommentSubUsername": "Visitor",
               "RecipeSubCategoryCommentContent": "Moussaka"
             }
@@ -196,7 +196,7 @@
           "RecipeSubCategoryComments": [
             {
               "RecipeSubCategoryCommentPic": "https://i.pravatar.cc/",
-              "RecipeSubCategoryCommentUsername": "Coban Salatasi",
+              "RecipeSubCategoryCommentUsername": "Comment username",
               "RecipeSubCategoryCommentSubUsername": "Visitor",
               "RecipeSubCategoryCommentContent": "Coban Salatasi"
             }
@@ -234,9 +234,9 @@
           "RecipeSubCategoryComments": [
             {
               "RecipeSubCategoryCommentPic": "https://i.pravatar.cc/",
-              "RecipeSubCategoryCommentUsername": "Chicken Curry",
+              "RecipeSubCategoryCommentUsername": "Comment username",
               "RecipeSubCategoryCommentSubUsername": "Visitor",
-              "RecipeSubCategoryCommentContent": "Chicken Curry"
+              "RecipeSubCategoryCommentContent": "Filipino Chicken Curry"
             }
           ]
         },
@@ -273,7 +273,7 @@
           "RecipeSubCategoryComments": [
             {
               "RecipeSubCategoryCommentPic": "https://i.pravatar.cc/",
-              "RecipeSubCategoryCommentUsername": "Tashreeb",
+              "RecipeSubCategoryCommentUsername": "Comment username",
               "RecipeSubCategoryCommentSubUsername": "Visitor",
               "RecipeSubCategoryCommentContent": "Tashreeb"
             }

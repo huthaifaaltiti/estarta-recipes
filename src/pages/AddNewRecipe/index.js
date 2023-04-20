@@ -2,30 +2,32 @@
 import React, { useState } from "react";
 // react-redux
 import { useDispatch } from "react-redux";
+// react-router-dom
+import { useNavigate } from "react-router-dom";
+
+// component
+import DoActionBtn from "../../components/DoActionBtn/index";
 
 // function creator
 import { addNewRecipe } from "../../redux/Reducers/RecipesReducer/actions";
 
-// styles
+// styles, icons
 import styles from "./styles.module.css";
+import { BsReceiptCutoff, BsPlus } from "react-icons/bs";
+import { MdOutlineUploadFile } from "react-icons/md";
+import { BiHomeAlt2 } from "react-icons/bi";
 
 export default function AddNewRecipe() {
   const dispatch = useDispatch();
+  const nav = useNavigate();
 
   const [mainDishCategory, setMainDishCategory] =
-    useState("Main Dish Category");
+    useState("Main Food Category");
   const [recipeName, setRecipeName] = useState("");
   const [recipeDesc, setRecipeDesc] = useState("");
   const [ingredients, setIngredients] = useState([""]);
   const [aboutIngredients, setAboutIngredients] = useState([""]);
-
-  // console.log(
-  //   { mainDishCategory },
-  //   { recipeName },
-  //   { recipeDesc },
-  //   { ingredients },
-  //   { aboutIngredients }
-  // );
+  const [unacceptedImageSize, setUnacceptedImageSize] = useState(false);
 
   const handleMainDishCategory = (event) => {
     setMainDishCategory(event.target.value);
@@ -62,14 +64,27 @@ export default function AddNewRecipe() {
   };
 
   const handleImageUpload = (event) => {
+    localStorage.removeItem("recipePic");
+
     const file = event.target.files[0];
+
+    if (file.size > 9 * 1024 * 1024) {
+      alert("Image size should be less than 9 MB");
+
+      setUnacceptedImageSize(false);
+
+      return;
+    }
 
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = () => {
       const dataUrl = reader.result;
+
       localStorage.setItem("recipePic", dataUrl);
     };
+
+    setUnacceptedImageSize(true);
   };
 
   const handleSubmit = (event) => {
@@ -85,13 +100,29 @@ export default function AddNewRecipe() {
         localStorage.getItem("recipePic")
       )
     );
+
+    nav(`/recipes/${mainDishCategory}`);
   };
 
   return (
-    <div>
-      <section className={styles.modalMain}>
+    <div className={styles.addNewRecipePage}>
+      <div className={styles.addNewRecipePageCont}>
         <header>
-          <h3>Add a new recipe</h3>
+          <div>
+            <span>
+              <BsReceiptCutoff className={styles.icon} />
+            </span>
+
+            <h3>Add a New Recipe</h3>
+          </div>
+
+          <span
+            onClick={() => {
+              nav("/");
+            }}
+          >
+            <DoActionBtn text={"Home Page"} icon={<BiHomeAlt2 />} />
+          </span>
         </header>
 
         <form onSubmit={handleSubmit} action="#">
@@ -100,7 +131,9 @@ export default function AddNewRecipe() {
             value={mainDishCategory}
             onChange={handleMainDishCategory}
           >
-            <option value="">Main Food Category</option>
+            <option value="" hidden>
+              Main Food Category
+            </option>
             <option value="Arabic Food">Arabic Food</option>
             <option value="Turkish Food">Turkish Food</option>
             <option value="Sea Food">Sea Food</option>
@@ -115,7 +148,7 @@ export default function AddNewRecipe() {
           />
 
           {ingredients?.map((ingredient, index) => (
-            <div key={index}>
+            <div className={styles.ingredientsCont} key={index}>
               <input
                 required
                 type="text"
@@ -129,40 +162,50 @@ export default function AddNewRecipe() {
                 type="text"
                 value={aboutIngredients[index]}
                 onChange={(event) => handleAboutIngredientChange(index, event)}
-                placeholder={`About Recipe Ingredient ${index + 1}`}
+                placeholder={`Description of Recipe Ingredient ${index + 1}`}
               />
 
-              <button
-                type="button"
-                onClick={() => handleRemoveIngredient(index)}
-              >
-                Remove
-              </button>
+              {ingredient.length > 0 && ingredients.length > 1 && (
+                <button
+                  type="button"
+                  onClick={() => handleRemoveIngredient(index)}
+                >
+                  {`Remove Ingredient ${index + 1}`}
+                </button>
+              )}
             </div>
           ))}
 
-          <button type="button" onClick={handleAddIngredient}>
-            Add Ingredient
-          </button>
+          <span onClick={handleAddIngredient}>
+            <DoActionBtn text={"Add More Ingredients"} icon={<BsPlus />} />
+          </span>
 
           <textarea
             required
             value={recipeDesc}
             onChange={handleRecipeDesc}
-            placeholder="Recipe Description"
+            placeholder="Type here recipe description.."
           />
 
-          <p>Upload dish pic, not that its size less 5-10 MB</p>
-          <input
-            required
-            type="file"
-            accept="image/png, image/jpeg"
-            onChange={handleImageUpload}
-          />
+          <div className={styles.imageUploadCont}>
+            <input
+              required
+              type="file"
+              accept="image/png, image/jpeg"
+              onChange={handleImageUpload}
+            />
+            <p className={styles.imageUploadNote}>
+              Upload dish pic, note that its size is less than 9 MB.
+            </p>
+          </div>
 
-          <button type="submit">Add Recipe</button>
+          {unacceptedImageSize && (
+            <span type="submit">
+              <DoActionBtn text={"Add Recipe"} icon={<MdOutlineUploadFile />} />
+            </span>
+          )}
         </form>
-      </section>
+      </div>
     </div>
   );
 }

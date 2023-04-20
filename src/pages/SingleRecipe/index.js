@@ -1,7 +1,7 @@
 // react
 import React, { useState } from "react";
 // react-router-dom
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 // react-redux
 import { useSelector } from "react-redux";
 
@@ -11,10 +11,13 @@ import DoActionBtn from "../../components/DoActionBtn/index";
 import AddCommentModal from "../../components/AddCommentModal/index";
 import AddRecipeComment from "../../components/AddRecipeComment";
 
-// styles
+// styles, icons
 import styles from "./styles.module.css";
+import { BiCommentAdd } from "react-icons/bi";
 
 export default function SingleRecipe() {
+  const nav = useNavigate();
+
   const [showModal, setShowModal] = useState(false);
   const handleShowModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
@@ -30,10 +33,11 @@ export default function SingleRecipe() {
 
   return (
     <div className={styles.singleRecipePage}>
-      {/* Form modal */}
+      {/* Form comment modal */}
       <AddCommentModal
         sentRecipeCategory={sentRecipeCategory}
         checkedRecipe={checkedRecipe}
+        singleRecipeCategory={singleRecipeCategory}
         show={showModal}
         handleClose={handleCloseModal}
       />
@@ -47,6 +51,21 @@ export default function SingleRecipe() {
         <div className={styles.singleRecipePageIntroCont}>
           <h1>{checkedRecipe[0].RecipeSubCategoryName}</h1>
         </div>
+
+        <div className={styles.backToRecipesBtnCont}>
+          <div className={styles.backToRecipesBtnSubCont}>
+            <span
+              onClick={() => {
+                nav(`/recipes/${sentRecipeCategory[0].RecipeCategory}`);
+                // nav(`/recipes/${singleRecipe.RecipeCategory}`);
+              }}
+            >
+              <DoActionBtn
+                text={`Back to ${sentRecipeCategory[0].RecipeCategory} Recipes`}
+              />
+            </span>
+          </div>
+        </div>
       </div>
 
       <div className={styles.singleRecipeDetailsCont}>
@@ -58,12 +77,12 @@ export default function SingleRecipe() {
               </p>
 
               <span onClick={handleShowModal}>
-                <DoActionBtn text={"Add Comment"} />
+                <DoActionBtn text={"Add Comment"} icon={<BiCommentAdd />} />
               </span>
             </header>
 
             <div>
-              {recipeComments.map((recipeComment) => (
+              {recipeComments?.map((recipeComment) => (
                 <AddRecipeComment
                   sentRecipeCategory={sentRecipeCategory}
                   checkedRecipeForDel={checkedRecipe}
@@ -88,6 +107,12 @@ export default function SingleRecipe() {
                 )
               )}
             </ul>
+
+            <h3>Recipe Description</h3>
+
+            <p className={styles.RecipeSubCategoryDesc}>
+              {checkedRecipe[0].RecipeSubCategoryDesc}
+            </p>
           </div>
         </div>
       </div>

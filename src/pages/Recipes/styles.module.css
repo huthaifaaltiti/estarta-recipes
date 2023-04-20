@@ -10,10 +10,33 @@
   position: relative;
 }
 
-.recipesPageIntro span {
+.slider {
+  display: flex;
+  width: 1000%; /* set the width of the slider to be 10 times the width of one slide */
+  transition: transform 0.5s ease-in-out;
+
+  overflow: hidden;
+}
+.sliderItem {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.actionBtnCont {
+  width: 100%;
+
+  padding: 0 4rem;
+
+  /* background-color: rgba(255, 0, 0, 0.096); */
+
   position: absolute;
-  bottom: -5%;
-  right: 10%;
+  bottom: -1.5rem;
+  right: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .recipesPageIntroCont {
@@ -30,9 +53,6 @@
 
 .recipesPageIntroCont h1 {
   font-size: 4rem;
-
-  /* position: -webkit-sticky;
-  position: sticky; */
 
   color: var(--color-pr);
 }
@@ -64,6 +84,32 @@
   margin-top: 1rem;
 }
 
+.sliderCont {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.btnsCont {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.sliderBtn {
+  padding: 1rem 2rem;
+
+  border-radius: 0.7rem;
+
+  background-color: var(--color-te);
+
+  cursor: pointer;
+}
 .subRecipeCategoriesCont {
   width: 100%;
   height: auto;
@@ -74,6 +120,8 @@
   margin-top: 1rem;
 
   background-color: var(--color-te);
+
+  overflow: hidden;
 
   display: flex;
   align-items: center;

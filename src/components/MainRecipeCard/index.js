@@ -9,6 +9,7 @@ import DoActionBtn from "../DoActionBtn";
 // styles, icons
 import styles from "./styles.module.css";
 import { GiHotMeal } from "react-icons/gi";
+import { BsReceiptCutoff } from "react-icons/bs";
 
 export default function MainRecipeCard({ singleRecipe }) {
   return (
@@ -26,11 +27,15 @@ export default function MainRecipeCard({ singleRecipe }) {
           src={singleRecipe.RecipeCategoryPic}
           alt={singleRecipe.RecipeCategory}
         />
-      </div>
 
-      <Link to={`/recipes/${singleRecipe.RecipeCategory}`}>
-        <span><DoActionBtn text={"All Recipes"}/></span>
-      </Link>
+        <div className={styles.btnCont}>
+          <Link to={`/recipes/${singleRecipe.RecipeCategory}`}>
+            <span className={styles.cardBtn}>
+              <DoActionBtn text={"All Recipes"} icon={<BsReceiptCutoff />} />
+            </span>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

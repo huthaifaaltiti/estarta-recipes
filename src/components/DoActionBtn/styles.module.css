@@ -13,8 +13,25 @@
   cursor: pointer;
 
   transition: all 0.1s ease-in-out;
+
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .doActionBtnBody button:hover {
   background-color: var(--color-se-l1);
+}
+
+.iconCont,
+.textCont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconClass {
+  font-size: 1.2rem;
+  color: var(--color-wh);
 }
