@@ -102,6 +102,8 @@ export default function AddNewRecipe() {
     );
 
     nav(`/recipes/${mainDishCategory}`);
+
+    window.location.reload();
   };
 
   return (
