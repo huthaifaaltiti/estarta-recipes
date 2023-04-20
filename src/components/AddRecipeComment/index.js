@@ -34,23 +34,23 @@ export default function AddRecipeComment({
       </span>
 
       <p className={styles.singleRecipeCommentContent}>
-        {recipeComment.RecipeSubCategoryCommentContent}.
+        {recipeComment?.RecipeSubCategoryCommentContent}.
       </p>
 
       <div className={styles.commentUserCont}>
         <div className={styles.commentUserImgCont}>
           <img
-            src={recipeComment.RecipeSubCategoryCommentPic}
+            src={recipeComment?.RecipeSubCategoryCommentPic}
             alt="Comment of unknown user"
           />
         </div>
 
         <div className={styles.commentUserNameCont}>
           <p className={styles.commentUsername}>
-            {recipeComment.RecipeSubCategoryCommentUsername}
+            {recipeComment?.RecipeSubCategoryCommentUsername}
           </p>
           <p className={styles.commentSubUsername}>
-            {recipeComment.RecipeSubCategoryCommentSubUsername}
+            {recipeComment?.RecipeSubCategoryCommentSubUsername}
           </p>
         </div>
       </div>

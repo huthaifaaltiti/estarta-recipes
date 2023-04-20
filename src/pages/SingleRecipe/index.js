@@ -24,7 +24,10 @@ export default function SingleRecipe() {
 
   const { singleRecipeCategory } = useParams();
 
-  const { sentRecipeCategory } = useSelector((state) => state.recipesReducer);
+  const { allRecipes, sentRecipeCategory } = useSelector(
+    (state) => state.recipesReducer
+  );
+
   const checkedRecipe = sentRecipeCategory[0].RecipeSubCategories.filter(
     (recipe) => recipe.RecipeSubCategoryName === singleRecipeCategory
   );
@@ -56,12 +59,20 @@ export default function SingleRecipe() {
           <div className={styles.backToRecipesBtnSubCont}>
             <span
               onClick={() => {
-                nav(`/recipes/${sentRecipeCategory[0].RecipeCategory}`);
+                nav(
+                  `/recipes/${
+                    sentRecipeCategory[0].RecipeCategory ||
+                    sentRecipeCategory[0][0].RecipeCategory
+                  }`
+                );
                 // nav(`/recipes/${singleRecipe.RecipeCategory}`);
               }}
             >
               <DoActionBtn
-                text={`Back to ${sentRecipeCategory[0].RecipeCategory} Recipes`}
+                text={`Back to ${
+                  sentRecipeCategory[0].RecipeCategory ||
+                  sentRecipeCategory[0][0].RecipeCategory
+                } Recipes`}
               />
             </span>
           </div>

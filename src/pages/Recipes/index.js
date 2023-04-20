@@ -28,6 +28,8 @@ export default function Recipes() {
     (recipe) => recipe.RecipeCategory === recipeCategory
   );
 
+  console.log("findRecipeCategory, Recipes page: ", findRecipeCategory);
+
   const handlePrevSlide = () => {
     setCurrentSlide((prev) => {
       if (prev === 0) return prev;

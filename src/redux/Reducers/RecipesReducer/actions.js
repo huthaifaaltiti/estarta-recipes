@@ -107,10 +107,10 @@ export const addNewRecipe =
           ? recipe.RecipeSubCategories.push(newRecipeToAdd)
           : recipe
       );
-      // console.log("After:", dataResponse.Recipes);
 
+      console.log("dataResponse.Recipes: ", dataResponse.Recipes);
       dispatch({
-        type: RECIPES_CONSTANTS.RECIPES_FETCH_DATA_SUCCESS,
+        type: RECIPES_CONSTANTS.RECIPES_ADD_NEW_RECIPE,
         payload: dataResponse.Recipes,
       });
     } catch (error) {

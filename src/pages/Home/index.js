@@ -19,8 +19,9 @@ export default function Home() {
   const { allRecipes } = useSelector((state) => state.recipesReducer);
 
   useEffect(() => {
-    !allRecipes && dispatch(fetchAllRecipes());
-    // dispatch(fetchAllRecipes());
+    // !allRecipes && dispatch(fetchAllRecipes());
+
+    dispatch(fetchAllRecipes());
   }, []);
 
   return (

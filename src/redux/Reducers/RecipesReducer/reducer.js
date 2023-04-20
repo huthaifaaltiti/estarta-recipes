@@ -25,6 +25,12 @@ const recipesReducer = (state = initialState, action) => {
         allRecipes: action.payload,
       };
 
+    case RECIPES_CONSTANTS.RECIPES_ADD_NEW_RECIPE:
+      return {
+        ...state,
+        allRecipes: action.payload,
+      };
+
     case RECIPES_CONSTANTS.RECIPES_SEND_RECIPE_CATEGORY:
       return {
         ...state,
