@@ -1,1 +1,58 @@
-/* Sector: NotFound main styles */
+/* Sector: NotFoundPage main classes */
+
+.notFoundPage {
+  width: 100%;
+  height: auto;
+}
+
+.notFoundPageCont {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.player {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.doAnActionCont {
+  width: 100%;
+
+  margin-top: 5rem;
+
+  display: grid;
+  place-items: center;
+}
+
+.doAnActionCont p {
+  font-size: 2rem;
+
+  padding: 0.5rem 1rem;
+
+  border-radius: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  background-color: var(--color-se);
+  color: #fff;
+
+  cursor: pointer;
+
+  transition: all 0.15s linear;
+}
+
+.doAnActionCont p:hover {
+  background-color: var(--color-gr);
+}
+
+.doAnActionIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+
+  color: var(--color-wh);
+}
