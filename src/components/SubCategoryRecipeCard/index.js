@@ -9,7 +9,11 @@ import DoActionBtn from "../DoActionBtn";
 // styles
 import styles from "./styles.module.css";
 
-export default function SubCategoryRecipeCard({ subRecipe, recipeCategory }) {
+export default function SubCategoryRecipeCard({
+  subRecipe,
+  recipeCategory,
+  findRecipeCategory,
+}) {
   return (
     <div
       className={styles.recipeSubCategoryBody}
@@ -21,7 +25,6 @@ export default function SubCategoryRecipeCard({ subRecipe, recipeCategory }) {
 
       <div className={styles.btnCont}>
         <Link
-          
           to={`/recipes/${recipeCategory}/${subRecipe.RecipeSubCategoryName}`}
         >
           <DoActionBtn text={"View Recipe"} />
