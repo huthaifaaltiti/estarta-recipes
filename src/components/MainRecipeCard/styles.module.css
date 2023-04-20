@@ -1,16 +1,14 @@
 /* Sector: MainRecipeCard main classes */
 
-/* You have to change it "width" automatically childs / 100 */
 .mainRecipeCardBody {
-  width: 33.33%;
+  width: 100%;
+  height: auto;
 
   border-radius: 1rem;
 
   background-color: var(--color-wh);
 
   box-shadow: var(--shadow-3);
-
-  position: relative;
 }
 
 .mainRecipeCardBody header {
@@ -45,6 +43,8 @@
 
   display: grid;
   place-items: center;
+
+  position: relative;
 }
 
 .mainRecipeImgCont img {
@@ -60,9 +60,24 @@
   border-bottom-right-radius: inherit;
 }
 
-.mainRecipeCardBody span {
+.btnCont {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translate(-50%, 0);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.cardBtn {
+  padding: 1rem 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

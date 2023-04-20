@@ -1,0 +1,44 @@
+/* Sector: Footer main classes */
+
+.footerBody {
+  width: 100%;
+  height: auto;
+
+  background-color: var(--color-gr-l2);
+}
+
+.footerCont {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.footerCont {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  border-top: 1px solid var(--color-gr);
+}
+
+.logoCont span {
+  font-weight: bold;
+}
+
+.copyrights {
+  font-size: 1.2rem;
+}
+
+.copyrights span {
+  text-decoration: underline;
+
+  margin-left: 0.5rem;
+}
+
+.copyrights span:hover {
+  text-decoration: none;
+}

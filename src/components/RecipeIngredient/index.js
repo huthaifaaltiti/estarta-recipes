@@ -18,7 +18,7 @@ export default function RecipeIngredient({ ingredient }) {
         <span className={styles.recipeIngredientName}>
           {ingredient.RecipeSubCategoryIngredientName}
         </span>
-        
+
         <span
           className={styles.recipeIngredientIconCont}
           onClick={handleSubContentClick}
@@ -31,11 +31,17 @@ export default function RecipeIngredient({ ingredient }) {
         </span>
       </div>
 
-      {showSubContent && (
-        <p className={styles.recipeIngredientDesc}>
-          {ingredient.RecipeSubCategoryIngredientDesc}
-        </p>
-      )}
+      <p
+        className={styles.recipeIngredientDesc}
+        style={{
+          maxHeight: showSubContent ? "1000px" : "0",
+          opacity: showSubContent ? "1" : "0",
+          visibility: showSubContent ? "visible" : "hidden",
+          transition: "max-height 0.3s ease-out, opacity 0.3s ease-out",
+        }}
+      >
+        {ingredient.RecipeSubCategoryIngredientDesc}
+      </p>
     </div>
   );
 }

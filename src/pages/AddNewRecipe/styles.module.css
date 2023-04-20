@@ -1,29 +1,18 @@
 /* Sector: AddNewRecipe main classes */
 
-.modal {
-  display: block;
-
+.addNewRecipePage {
   width: 100%;
-  height: 100%;
-
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(3px);
 }
 
-.hideModal {
-  display: none;
-}
-
-.modalMain {
-  width: 50%;
-  max-width: 800px;
-
-  background-color: var(--color-wh);
+.addNewRecipePageCont {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
 
   border-radius: 4px;
 }
 
-.modalMain header {
+.addNewRecipePageCont header {
   width: 100%;
 
   padding: 2rem;
@@ -31,27 +20,30 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 3rem;
+  gap: 1rem;
 
   border-bottom: 1px solid var(--color-gr);
 }
 
-.modalMain header h3 {
-  font-size: 1.8rem;
+.addNewRecipePageCont header div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.addNewRecipePageCont header .icon {
+  width: 2.2rem;
+  height: auto;
+}
+
+.addNewRecipePageCont header h3 {
+  font-size: 3rem;
 
   color: var(--color-pr);
 }
 
-.closeIcon {
-  width: 2.5rem;
-  height: 2.5rem;
-
-  cursor: pointer;
-
-  color: var(--color-se);
-}
-
-.modalMain form {
+.addNewRecipePageCont form {
   padding: 3rem;
 
   display: flex;
@@ -60,9 +52,9 @@
   gap: 2rem;
 }
 
-.modalMain form input,
-.modalMain form select,
-.modalMain form textarea {
+.addNewRecipePageCont form input,
+.addNewRecipePageCont form select,
+.addNewRecipePageCont form textarea {
   width: 100%;
 
   padding: 1rem;
@@ -78,14 +70,22 @@
   color: var(--color-tex-l3);
 }
 
-.modalMain form input::placeholder,
-.modalMain form textarea::placeholder {
+.addNewRecipePageCont form input::placeholder,
+.addNewRecipePageCont form textarea::placeholder {
   font-size: 1.4rem;
 
   color: var(--color-tex-l3);
 }
 
-.modalMain form button {
+.ingredientsCont {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.addNewRecipePageCont form button {
   padding: 1rem 2rem;
 
   border: none;
@@ -101,6 +101,41 @@
   transition: all 0.2s ease-in-out;
 }
 
-.modalMain form button:hover {
+.addNewRecipePageCont form button:hover {
   background-color: var(--color-se-l2);
+}
+
+.imageUploadCont {
+  width: 100%;
+}
+
+.imageUploadCont p {
+  font-size: 1.2rem;
+
+  color: var(--color-tex-d1);
+}
+
+/* Sector: media quires */
+
+/* 560px / 16px = 35 */
+@media (max-width: 35em) {
+  .addNewRecipePageCont header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+}
+
+/* 384px / 16px = 24 */
+@media (max-width: 24em) {
+  .addNewRecipePageCont header h3 {
+    font-size: 2.5rem;
+  }
+
+  .imageUploadCont p {
+    font-size: 1rem;
+  }
 }

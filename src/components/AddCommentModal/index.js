@@ -10,11 +10,12 @@ import { addRecipeComment } from "../../redux/Reducers/RecipesReducer/actions";
 import styles from "./styles.module.css";
 import { IoIosClose } from "react-icons/io";
 
-export default function HireMeModal({
+export default function AddCommentModal({
   handleClose,
   show,
   sentRecipeCategory,
   checkedRecipe,
+  singleRecipeCategory,
 }) {
   const dispatch = useDispatch();
 
@@ -49,7 +50,8 @@ export default function HireMeModal({
         userStatus,
         commentContent,
         sentRecipeCategory,
-        checkedRecipe
+        checkedRecipe,
+        singleRecipeCategory
       )
     );
   };
@@ -78,7 +80,9 @@ export default function HireMeModal({
             value={userStatus}
             onChange={handleUserStatusSelection}
           >
-            <option value="">User status</option>
+            <option value="" hidden>
+              User status
+            </option>
             <option value="Viewer">Viewer</option>
             <option value="Follower">Follower</option>
             <option value="Visitor">Visitor</option>
