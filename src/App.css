@@ -1,5 +1,7 @@
 /* Sector: App main classes */
 .App {
   width: 100%;
+  height: auto;
+
   margin: 0 auto;
 }

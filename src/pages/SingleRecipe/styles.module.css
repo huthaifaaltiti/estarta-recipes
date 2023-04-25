@@ -30,6 +30,14 @@
   justify-content: flex-end;
 }
 
+.backBtnCont {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+
+  background-color: red;
+}
+
 .singleRecipePageIntroCont {
   width: 90%;
   height: 50vh;
@@ -84,6 +92,12 @@
   font-size: 1.2rem;
 
   color: var(--color-tex-l3);
+}
+
+.noComments {
+  font-size: 1.4rem;
+
+  color: var(--color-gr-d1);
 }
 
 .singleRecipeCommentCont {

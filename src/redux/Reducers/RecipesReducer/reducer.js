@@ -25,12 +25,6 @@ const recipesReducer = (state = initialState, action) => {
         allRecipes: action.payload,
       };
 
-    case RECIPES_CONSTANTS.RECIPES_ADD_NEW_RECIPE:
-      return {
-        ...state,
-        allRecipes: action.payload,
-      };
-
     case RECIPES_CONSTANTS.RECIPES_SEND_RECIPE_CATEGORY:
       return {
         ...state,
@@ -46,15 +40,12 @@ const recipesReducer = (state = initialState, action) => {
         singleRecipeCategory,
       } = action.payload;
 
-      console.log({ singleRecipeCategory });
-
       const neededRecipe =
         state.sentRecipeCategory[0].RecipeSubCategories.filter(
           (category) =>
             checkedRecipe[0].RecipeSubCategoryName ===
             category.RecipeSubCategoryName
         );
-
       const newNeededRecipe = {
         ...neededRecipe[0],
         RecipeSubCategoryComments: [
@@ -72,13 +63,13 @@ const recipesReducer = (state = initialState, action) => {
         state.sentRecipeCategory[0].RecipeSubCategories.map((category) =>
           checkedRecipe[0] === category ? newNeededRecipe : category
         );
-
+      // console.log("state.sentRe:        ", state.sentRecipeCategory[0]);
       return {
         ...state,
         sentRecipeCategory: [
           {
-            ...state.sentRecipeCategory,
-            RecipeSubCategories: [...newCategorySate],
+            ...state.sentRecipeCategory[0],
+            RecipeSubCategories: newCategorySate,
           },
         ],
       };
@@ -111,7 +102,7 @@ const recipesReducer = (state = initialState, action) => {
         ...state,
         sentRecipeCategory: [
           {
-            ...state.sentRecipeCategory,
+            ...state.sentRecipeCategory[0],
             RecipeSubCategories: [...newUpdatedSate],
           },
         ],

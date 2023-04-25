@@ -110,7 +110,7 @@ export const addNewRecipe =
 
       console.log("dataResponse.Recipes: ", dataResponse.Recipes);
       dispatch({
-        type: RECIPES_CONSTANTS.RECIPES_ADD_NEW_RECIPE,
+        type: RECIPES_CONSTANTS.RECIPES_FETCH_DATA_SUCCESS,
         payload: dataResponse.Recipes,
       });
     } catch (error) {

@@ -63,7 +63,9 @@ export default function Home() {
         </div>
       </div>
 
-      <Footer />
+      <div className={styles.footerCont}>
+        <Footer />
+      </div>
     </>
   );
 }
