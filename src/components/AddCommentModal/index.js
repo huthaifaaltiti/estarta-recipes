@@ -95,7 +95,9 @@ export default function AddCommentModal({
             placeholder="Comment here"
           />
 
-          <button type="submit">Add Comment</button>
+          {userName && commentContent && (
+            <button type="submit">Add Comment</button>
+          )}
         </form>
       </section>
     </div>
