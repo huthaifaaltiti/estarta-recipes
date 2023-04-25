@@ -45,11 +45,12 @@
 
 .addNewRecipePageCont form {
   padding: 3rem;
+  margin-top: 3rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .addNewRecipePageCont form input,

@@ -35,6 +35,8 @@ export default function Recipes() {
       if (prev === 0) return prev;
       return prev - 1;
     });
+
+    console.log({ currentSlide });
   };
 
   const handleNextSlide = () => {
@@ -44,6 +46,8 @@ export default function Recipes() {
       }
       return prev + 1;
     });
+
+    console.log({ currentSlide });
   };
 
   useEffect(() => {
@@ -92,6 +96,9 @@ export default function Recipes() {
                     ((100 / findRecipeCategory[0].RecipeSubCategories.length) *
                       findRecipeCategory[0].RecipeSubCategories.length)
                   }%`,
+                  width: `${
+                    findRecipeCategory[0].RecipeSubCategories.length * 10
+                  }`,
                   transition: "margin-left 0.5s ease",
                 }}
               >

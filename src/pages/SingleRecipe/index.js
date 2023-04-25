@@ -26,12 +26,13 @@ export default function SingleRecipe() {
 
   const { sentRecipeCategory } = useSelector((state) => state.recipesReducer);
 
+  console.log("sentRecipeCategory-after fetching:", sentRecipeCategory);
+
   const checkedRecipe = sentRecipeCategory[0].RecipeSubCategories.filter(
     (recipe) => recipe.RecipeSubCategoryName === singleRecipeCategory
   );
-
+  console.log(checkedRecipe);
   const recipeComments = checkedRecipe[0].RecipeSubCategoryComments;
-
   return (
     <div className={styles.singleRecipePage}>
       {/* Form comment modal */}
@@ -57,20 +58,11 @@ export default function SingleRecipe() {
           <div className={styles.backToRecipesBtnSubCont}>
             <span
               onClick={() => {
-                nav(
-                  `/recipes/${
-                    sentRecipeCategory[0].RecipeCategory ||
-                    sentRecipeCategory[0][0].RecipeCategory
-                  }`
-                );
-                // nav(`/recipes/${singleRecipe.RecipeCategory}`);
+                nav(`/recipes/${sentRecipeCategory[0].RecipeCategory}`);
               }}
             >
               <DoActionBtn
-                text={`Back to ${
-                  sentRecipeCategory[0].RecipeCategory ||
-                  sentRecipeCategory[0][0].RecipeCategory
-                } Recipes`}
+                text={`Back to ${sentRecipeCategory[0].RecipeCategory} Recipes`}
               />
             </span>
           </div>
@@ -91,13 +83,19 @@ export default function SingleRecipe() {
             </header>
 
             <div>
-              {recipeComments?.map((recipeComment) => (
-                <AddRecipeComment
-                  sentRecipeCategory={sentRecipeCategory}
-                  checkedRecipeForDel={checkedRecipe}
-                  recipeComment={recipeComment}
-                />
-              ))}
+              {recipeComments.length <= 1 ? (
+                <p className={styles.noComments}>No Comments</p>
+              ) : (
+                recipeComments
+                  ?.slice(1)
+                  .map((recipeComment) => (
+                    <AddRecipeComment
+                      sentRecipeCategory={sentRecipeCategory}
+                      checkedRecipeForDel={checkedRecipe}
+                      recipeComment={recipeComment}
+                    />
+                  ))
+              )}
             </div>
           </div>
 
